@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  /* Remove Tailwind's default palette so only the brand colours can be used. */
+  --color-*: initial;
+  --color-ink: #06141b;
+  --color-navy: #11212d;
+  --color-slate-dark: #253745;
+  --color-slate: #4a5c6a;
+  --color-mist: #9ba8ab;
+  --color-silver: #ccd0cf;
+  --color-surface: #eef0f0;
+  --color-hairline: #e3e6e6;
+  --color-white: #ffffff;
+  /* Two tints the approved mockup uses: dashboard background, footer wordmark. */
+  --color-wash: #fafbfb;
+  --color-ghost: #e8ebeb;
+
+  --font-sans: var(--font-inter-tight), Inter, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+@utility page-container {
+  /* The 1240px excludes the side padding, as in the mockup. */
+  box-sizing: content-box;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 20px;
+
+  @media (width >= 48rem) {
+    padding-inline: 32px;
+  }
+}
+
+@layer base {
+  html {
+    /* Keeps anchor targets clear of the sticky nav. Matches the nav's height. */
+    scroll-padding-top: 69px;
+  }
+
+  @media (width >= 64rem) {
+    html {
+      scroll-padding-top: 89px;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    /* The mockup uses the font's natural line height unless a size sets one. */
+    line-height: normal;
+    overflow-wrap: break-word;
+  }
+
+  input::placeholder {
+    color: var(--color-slate);
+    opacity: 1;
+  }
+
+  button,
+  summary {
+    cursor: pointer;
+  }
+
+  /* White gap plus ink outline, so the ring shows on light and dark surfaces. */
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--color-white);
+  }
+}

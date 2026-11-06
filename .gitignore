@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.vercel/
+.claude/
+.env*
+!.env.example
+
+# Local waitlist sign-ups (personal information, never commit)
+.data/
