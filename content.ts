@@ -91,7 +91,7 @@ export const benefits = {
     {
       number: "03",
       title: "Content without the grind",
-      text: "A month of posts, reel scripts and area spotlights from one short session — so you stay visible without living on your phone.",
+      text: "A month of posts and area spotlights from one short session — so you stay visible without living on your phone.",
     },
   ],
 };
