@@ -322,6 +322,16 @@ export const offers = {
     badge: "Membership",
     headline: "Listing Labs Members.",
     headlineMuted: "Always one step ahead.",
+    includesLabel: "Everything included",
+    includes: [
+      products.course,
+      products.dashboard,
+      products.promptPack,
+      products.whatsapp,
+      products.showDay,
+      products.newAgent,
+    ],
+    perksLabel: "Plus",
     perks: [
       "New prompts & templates every month",
       "Monthly live Q&A",

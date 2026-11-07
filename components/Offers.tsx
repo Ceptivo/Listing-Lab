@@ -110,7 +110,21 @@ export function Offers() {
               <br />
               <span className="text-mist">{membership.headlineMuted}</span>
             </h3>
-            <ul className="mt-7 flex flex-wrap gap-[10px]">
+            <p className="mt-7 mb-3 text-[15px] font-semibold text-mist">
+              {membership.includesLabel}
+            </p>
+            <ul className="flex flex-wrap gap-[10px]">
+              {membership.includes.map((product) => (
+                <li
+                  key={product.name}
+                  className="rounded-full bg-white px-4 py-[10px] text-[15px] font-semibold text-ink"
+                >
+                  {product.name}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 mb-3 text-[15px] font-semibold text-mist">{membership.perksLabel}</p>
+            <ul className="flex flex-wrap gap-[10px]">
               {membership.perks.map((perk) => (
                 <li
                   key={perk}
